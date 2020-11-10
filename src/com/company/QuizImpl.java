@@ -1,6 +1,5 @@
 package com.company;
 
-
 class QuizImpl implements Quiz{
     private int digit;
 
@@ -9,7 +8,11 @@ class QuizImpl implements Quiz{
     }
 
     @Override
-    public void isCorrectValue(int value){
-
+    public void isCorrectValue(int value) throws ParamTooLarge, ParamTooSmall {
+        if (value > digit){
+            throw new ParamTooLarge();
+        }else if (value < digit){
+            throw new ParamTooSmall();
+        }
     }
 }
