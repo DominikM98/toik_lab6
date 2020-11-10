@@ -17,6 +17,6 @@ interface Quiz {
     void isCorrectValue(int value)
         throws Quiz.ParamTooLarge, Quiz.ParamTooSmall;
 
-    class ParamTooLarge extends Exception {}
-    class ParamTooSmall extends Exception {}
+    class ParamTooLarge extends Exception { }
+    class ParamTooSmall extends Exception { }
 }
